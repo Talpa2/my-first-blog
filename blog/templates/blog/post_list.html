@@ -10,11 +10,18 @@
             <h2><a href="">My first post</a></h2>
             <p>Привет тунеядцы.</p>
         </div>
-
+        {% for post in posts %}
         <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+        <!-- <div>
             
             <h2><a href="">My second post</a></h2>
             <p>Кто не кушает тот работает.</p>
-        </div>
+        </div> -->
     </body>
 </html>
